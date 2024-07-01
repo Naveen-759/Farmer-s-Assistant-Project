@@ -5,7 +5,7 @@ const FertilizersFun = async (req, res) => {
     const { Crop_name, Soil_type } = req.query;
     const data = await db.promise().query(
       `select * 
-      from Fertilizer
+      from fertilizer
       where Crop_name LIKE ? and Soil_Type LIKE ?;`,
       [Crop_name, Soil_type]
     );
@@ -13,6 +13,7 @@ const FertilizersFun = async (req, res) => {
     const fertilizers = data[0];
     res.status(200).json({ msg: "fertilizers successful", fertilizers });
   } catch (error) {
+    console.error("fertilizers query error:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 };

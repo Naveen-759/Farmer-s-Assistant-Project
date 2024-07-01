@@ -5,7 +5,7 @@ const DiseasesFun = async (req, res) => {
     const { Crop_name } = req.query;
     const data = await db.promise().query(
       `select * 
-      from Disease  
+      from disease  
       where Crop_name LIKE ?;`,
       [Crop_name]
     );
@@ -13,6 +13,7 @@ const DiseasesFun = async (req, res) => {
     const diseases = data[0];
     res.status(200).json({ msg: "diseases successful", diseases });
   } catch (error) {
+    console.error("diseases query error:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
