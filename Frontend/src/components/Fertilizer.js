@@ -80,7 +80,7 @@ export default function Fertilizer() {
   };
 
   return (
-    <div className="wrapper">
+    <div className="fertilizer1">
       <div className="fertilist">
         <form onSubmit={handleSubmit} className="form-11">
           <label htmlFor="soilType">Soil Type</label>
@@ -111,7 +111,9 @@ export default function Fertilizer() {
             ))}
           </select>
 
-          <button type="submit">Get List</button>
+          <button type="submit" disabled={selectedOption1 === ""}>
+            Get List
+          </button>
         </form>
       </div>
       {fertilizersData.fertilizers && (
@@ -121,7 +123,7 @@ export default function Fertilizer() {
               <th>Fertilizer id</th>
               <th>Fertilizer name</th>
               <th>App rate</th>
-              <th>Fertilizer cost</th>
+
               <th>Physical form</th>
               <th>Storage condition</th>
               <th>Safety caution</th>
@@ -135,7 +137,7 @@ export default function Fertilizer() {
                 <td>{data.Fertilizer_id}</td>
                 <td>{data.Fertilizer_name}</td>
                 <td>{data.App_rate}</td>
-                <td>{data.Fertilizer_cost}</td>
+
                 <td>{data.Physical_form}</td>
                 <td>{data.Storage_condition}</td>
                 <td>{data.Safety_caution}</td>

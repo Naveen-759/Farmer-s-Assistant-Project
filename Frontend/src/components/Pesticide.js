@@ -64,7 +64,7 @@ export default function Pesticide() {
   };
 
   return (
-    <div className="wrapper">
+    <div className="pesticide1">
       <div className="pestilist">
         <form onSubmit={handleSubmit} className="form-11">
           <label htmlFor="cropName">Crop Name</label>
@@ -114,7 +114,9 @@ export default function Pesticide() {
             ))}
           </select>
 
-          <button type="submit">Get List</button>
+          <button type="submit" disabled={selectedOption1 === ""}>
+            Get List
+          </button>
         </form>
       </div>
       {pesticidesData.pesticides && (
@@ -127,7 +129,7 @@ export default function Pesticide() {
               <th>Crop Name</th>
               <th>Application rate</th>
               <th>Target Pest</th>
-              <th>Pesticide cost</th>
+
               <th>Safety caution</th>
               <th>Disease id</th>
             </tr>
@@ -141,7 +143,7 @@ export default function Pesticide() {
                 <td>{data.Crop_name}</td>
                 <td>{data.App_rate}</td>
                 <td>{data.Target_pest}</td>
-                <td>{data.Pesticide_cost}</td>
+
                 <td>{data.Safety_caution}</td>
                 <td>{data.Disease_id}</td>
               </tr>

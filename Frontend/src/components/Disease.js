@@ -26,7 +26,7 @@ export default function Disease() {
   };
 
   return (
-    <div className="wrapper">
+    <div className="disease1">
       <div className="dislist">
         <form onSubmit={handleSubmit} className="form-11">
           <label>Crop Name </label>
@@ -54,7 +54,9 @@ export default function Disease() {
             <option value="Tobacco">Tobacco</option>
             <option value="Wheat">Wheat</option>
           </select>
-          <button type="submit">Get List</button>
+          <button type="submit" disabled={selectedCropName === ""}>
+            Get List
+          </button>
         </form>
       </div>
       {diseasesData.diseases && (

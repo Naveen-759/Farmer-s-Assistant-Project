@@ -3,7 +3,7 @@ import { fetchcrops } from "./services/api";
 import "../components/Main.css";
 
 export default function CropList() {
-  const [selectedSoilType, setSelectedSoilType] = useState("Alluvial Soil");
+  const [selectedSoilType, setSelectedSoilType] = useState("");
   const [cropsData, setCrops] = useState([]);
 
   const handleSubmit = async (event) => {
@@ -26,7 +26,7 @@ export default function CropList() {
   };
 
   return (
-    <div className="wrapper">
+    <div className="croplist1">
       <div className="crop_list">
         <form onSubmit={handleSubmit} className="form-11">
           <label htmlFor="soilType">Soil Type</label>
@@ -36,12 +36,15 @@ export default function CropList() {
             onChange={handleSoilTypeChange}
             className="soil-select"
           >
+            <option value="">Select Soil</option>
             <option value="Alluvial Soil">Alluvial Soil</option>
             <option value="Black Soil">Black Soil</option>
             <option value="Red Soil">Red Soil</option>
             <option value="Mountain Soil">Mountain Soil</option>
           </select>
-          <button type="submit">Get List</button>
+          <button type="submit" disabled={selectedSoilType === ""}>
+            Get List
+          </button>
         </form>
       </div>
       {cropsData.crops && (

@@ -3,23 +3,6 @@
   background-size: cover;
 }
 
-header img {
-  border-radius: 100%;
-  height: 100px;
-  width: 100px;
-  margin-right: 20px;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-  height: 125px;
-  text-shadow: 2px 2px 4px white;
-  background-color: #604132a1;
-  box-shadow: 0 1px 18px 10px rgba(0, 255, 115, 0.509);
-}
-
 .Home {
   display: flex;
   justify-content: space-between;
@@ -31,12 +14,116 @@ header {
   padding-right: 200px;
 }
 
-.containers {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-evenly;
+.main1 {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  margin-top: 110px;
+  background: url("../images/startPage.jpg") center / cover no-repeat;
+}
+
+.cont1 {
+  display: flex;
+  margin-left: 50px;
+  align-content: center;
+  text-align: center;
+  width: 900px;
+  height: 250px;
+  transition: transform 0.3s ease;
+}
+
+.cont2 {
+  display: flex;
+  margin-left: 450px;
+  align-content: center;
+  text-align: center;
+  width: 900px;
+  height: 250px;
+  transition: transform 0.3s ease;
+}
+
+.cont3 {
+  display: flex;
+  margin-left: 50px;
+  align-content: center;
+  text-align: center;
+  width: 900px;
+  height: 250px;
+  transition: transform 0.3s ease;
+}
+
+.cont4 {
+  display: flex;
+  margin-left: 450px;
+  margin-bottom: 20px;
+  align-content: center;
+  text-align: center;
+  width: 900px;
+  height: 250px;
+  transition: transform 0.3s ease;
+}
+
+/* .disc {
+  display: flex;
   align-items: center;
-  text-decoration: none;
+  font-size: 20px;
+  font-weight: bolder;
+  width: 600px;
+  color: white;
+  text-shadow: #a6b014;
+  margin-left: 25px;
+  margin-top: 50px;
+} */
+
+.disc {
+  width: 30em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge brown;
+  outline: none;
+  background-color: #a52a2a61;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.disc::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  transition: 0.5s;
+}
+
+.disc:hover::before,
+.disc:hover::after {
+  transform: scale(0);
+}
+
+.disc:hover {
+  box-shadow: inset 0px 0px 25px brown;
+}
+
+.cont1,
+.cont2,
+.cont3,
+.cont4 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transform: scale(1.05);
+}
+
+hr {
+  color: black;
+  height: 5px;
+  background-color: black;
 }
 
 .container1,
@@ -67,7 +154,11 @@ header {
   width: 500px;
   height: 300px;
   margin: auto;
-  border-radius: 80px;
+  border: none;
+  box-shadow: 0 1px 18px 10px rgb(63, 61, 61);
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: rgb(232 255 204 / 36%);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -88,15 +179,32 @@ select option:hover {
   background-color: #f9f9f9;
 }
 
-.wrapper {
+.croplist1,
+.disease1,
+.fertilizer1,
+.pesticide1 {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  min-height: 100vh;
+  margin-top: 100px;
 }
 
-.crop_list {
+.croplist1 {
+  background: url("../images/crops3.jpg") center / cover no-repeat;
+}
+.disease1 {
+  background: url("../images/disease.jpeg") center / cover no-repeat;
+}
+.fertilizer1 {
+  background: url("../images/ferti.jpg") center / cover no-repeat;
+}
+.pesticide1 {
+  background: url("../images/pesti.jpg") center / cover no-repeat;
+}
+
+/* .crop_list {
   background-image: url("../images/crops.jpg");
 }
 .fertilist {
@@ -107,7 +215,7 @@ select option:hover {
 }
 .pestilist {
   background-image: url("../images/pesti.jpg");
-}
+} */
 form {
   display: flex;
   color: #2a170d;
@@ -150,7 +258,11 @@ input {
   width: 450px;
 }
 
-a {
+.container1 > a,
+.container2 > a,
+.container3 > a,
+.container4 > a {
+  color: #2a170d;
   text-decoration: none;
 }
 

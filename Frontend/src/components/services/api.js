@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:3050/api/v1";
+const baseURL = `${process.env.REACT_APP_BASEURL}/api/v1`;
 
 export const fetchfertilizers = async (data) => {
   try {
