@@ -1,7 +1,7 @@
-.crop_list body {
+/* .crop_list body {
   background-image: url("../images/agri-bg.jpg");
   background-size: cover;
-}
+} */
 
 .Home {
   display: flex;
@@ -204,18 +204,6 @@ select option:hover {
   background: url("../images/pesti.jpg") center / cover no-repeat;
 }
 
-/* .crop_list {
-  background-image: url("../images/crops.jpg");
-}
-.fertilist {
-  background-image: url("../images/ferti.jpg");
-}
-.dislist {
-  background-image: url("../images/disease.jpeg");
-}
-.pestilist {
-  background-image: url("../images/pesti.jpg");
-} */
 form {
   display: flex;
   color: #2a170d;
