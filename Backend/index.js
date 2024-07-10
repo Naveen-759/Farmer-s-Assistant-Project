@@ -12,9 +12,15 @@ const pesticidesroutes = require("./routes/Crops");
 const { farmerSignup, farmerLogin } = require("./controllers/farmers");
 const adminLogin = require("./controllers/admin");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://farmer-s-assistant-project-ahvc.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
-app.options("*", cors());
+app.options("*", cors()); 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
