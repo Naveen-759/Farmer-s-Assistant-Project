@@ -1,7 +1,10 @@
 const express = require("express");
-const app = express();
+
 const port = 3050;
 const cors = require("cors");
+
+const app = express();
+
 const fertilizersroutes = require("./routes/Crops");
 const cropsroutes = require("./routes/Crops");
 const diseasesroutes = require("./routes/Crops");
