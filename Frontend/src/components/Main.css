@@ -246,10 +246,10 @@ input {
   width: 450px;
 }
 
-.container1 > a,
-.container2 > a,
-.container3 > a,
-.container4 > a {
+.cont1 a,
+.cont2 a,
+.cont3 a,
+.cont4 a {
   color: #2a170d;
   text-decoration: none;
 }
