@@ -20,11 +20,12 @@ app.use(
   })
 );
 
-app.options("*", cors()); 
+app.options("*", cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/", (req, res) => res.json("wlecome to farmer-s-assistant"));
 app.use("/api/v1", fertilizersroutes);
 app.use("/api/v2", cropsroutes);
 app.use("/api/v3", diseasesroutes);
