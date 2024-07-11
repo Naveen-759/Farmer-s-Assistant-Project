@@ -5,9 +5,11 @@ export default function Main() {
   return (
     <div className="main1">
       <div className="cont1">
-        <div className="container1">
-          <Link to="/croplist">Crop List</Link>
-        </div>
+        <Link to="/croplist">
+          <div className="container1">
+            <h4>Crop List</h4>
+          </div>
+        </Link>
 
         <div className="disc">
           Select the type of the soil and get the list of crops that can be
