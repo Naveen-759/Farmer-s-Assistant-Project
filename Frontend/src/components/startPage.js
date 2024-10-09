@@ -15,7 +15,7 @@ const startPage = () => {
           <div className="overlay"></div>
           <div className="container">
             <h1 className="titlestart">
-              Revolutionizing Agriculture: Meet Your AI-Powered Farmer Assistant
+              Revolutionizing Agriculture: Meet Your Farmer Assistant
               for Smarter Farming
             </h1>
             <p className="description">
