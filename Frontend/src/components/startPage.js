@@ -19,7 +19,7 @@ const startPage = () => {
               for Smarter Farming
             </h1>
             <p className="description">
-              Introducing our AI-Powered Farmer Assistant, designed to
+              Introducing our Farmer Assistant, designed to
               revolutionize agriculture with real-time insights and actionable
               data. Optimize irrigation, monitor crop health, and manage
               livestock efficiently for increased productivity and sustainable
