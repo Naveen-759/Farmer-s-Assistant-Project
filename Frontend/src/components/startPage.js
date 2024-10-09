@@ -27,9 +27,6 @@ const startPage = () => {
               yields effortlessly.
             </p>
             <div className="logandsignbutton">
-              <Link to="/adminlogin">
-                <button className="buttonlogin">Admin Login</button>
-              </Link>
               <Link to="/farmerlogin">
                 <button className="buttonlogin">Farmer Login</button>
               </Link>
