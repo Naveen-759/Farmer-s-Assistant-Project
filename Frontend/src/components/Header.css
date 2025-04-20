@@ -1,73 +1,63 @@
 /* General styling for the header container */
 header {
-  position: fixed;
-  width: 100vw;
-  top: 0; /* Sticks to the top */
-  z-index: 1000;
-  background-color: #e8f5e9; /* Light green background color */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  padding: 1rem;
-  border-radius: 8px;
-  transition: background-color 0.3s ease-in-out;
-  height: 80px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 95vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #e8f5e9;
+  color: white;
 }
 
-/* Style for the main title link */
-.Home {
+.logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #2e7d32; /* Forest green color */
+  color: #2e7d32;
   transition: color 0.3s ease-in-out;
 }
 
-.Home img {
+.logo img {
   width: 60px;
   height: 60px;
   margin-right: 1rem;
   border-radius: 100%; /* Make the image circular */
 }
 
-.Home h1 {
+.logo h1 {
   font-size: 1.8rem;
   font-weight: bold;
 }
 
-/* Hover effect for the title link */
-.Home:hover {
-  color: #1b5e20; /* Darker green on hover */
+.logo:hover {
+  color: #1b5e20;
 }
 
-/* Navigation bar styling */
 .nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-  padding-right: 2rem;
-}
-
-.nav0 {
-  display: flex;
-  gap: 1rem; /* Space between nav items */
 }
 
 .nav1,
 .nav2,
-.nav3 {
+.logout-btn {
+  background-color: #388e3c;
+  color: #a4f6aa;
+  height: 30px;
+  width: 125px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.nav1 a,
-.nav2 a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #4caf50; /* Medium green color */
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+.nav1:hover,
+.nav2:hover,
+.logout-btn:hover {
+  background-color: #059905; /* Darker green background */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 /* Icons in the nav links */
@@ -85,30 +75,110 @@ header {
 }
 
 /* Logout button styling */
-.logout-btn {
-  background-color: #66bb6a; /* Light green button background */
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  margin-left: 1.5rem;
+}
+
+.nav a {
   color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* Hover effect for logout button */
-.logout-btn:hover {
-  background-color: #388e3c; /* Darker green background */
-  transform: scale(1.05); /* Slightly enlarge on hover */
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #1b5e20;
+  margin: 4px 0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .nav0 {
-    flex-direction: column;
-    gap: 0.5rem; /* Reduce spacing for small screens */
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .logo h1 {
+    font-size: 1.6rem;
   }
 
-  .Home h1 {
-    font-size: 1.4rem; /* Smaller title on small screens */
+  .nav ul {
+    flex-direction: row;
+  }
+
+  .nav li {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #e8f5e9;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    border-radius: 5px;
+    z-index: 10;
+  }
+
+  /* .nav.open {
+    display: flex;
+  } */
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav li {
+    margin: 0;
+  }
+
+  .nav a {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h1 {
+    font-size: 1.4rem;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+  }
+
+  .menu-toggle .bar {
+    color: #1b5e20;
+    width: 40px;
+    height: 2px;
   }
 }

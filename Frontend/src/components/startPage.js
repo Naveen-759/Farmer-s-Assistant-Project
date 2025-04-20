@@ -15,21 +15,17 @@ const startPage = () => {
           <div className="overlay"></div>
           <div className="container">
             <h1 className="titlestart">
-              Revolutionizing Agriculture: Meet Your AI-Powered Farmer Assistant
-              for Smarter Farming
+              Revolutionizing Agriculture: Meet Your Farmer Assistant for
+              Smarter Farming
             </h1>
             <p className="description">
-              Introducing our AI-Powered Farmer Assistant, designed to
-              revolutionize agriculture with real-time insights and actionable
-              data. Optimize irrigation, monitor crop health, and manage
-              livestock efficiently for increased productivity and sustainable
-              practices. Empower your farming with smart decisions and maximize
-              yields effortlessly.
+              Introducing our armer Assistant, designed to revolutionize
+              agriculture with real-time insights and actionable data. Optimize
+              irrigation, monitor crop health, and manage livestock efficiently
+              for increased productivity and sustainable practices. Empower your
+              farming with smart decisions and maximize yields effortlessly.
             </p>
             <div className="logandsignbutton">
-              <Link to="/adminlogin">
-                <button className="buttonlogin">Admin Login</button>
-              </Link>
               <Link to="/farmerlogin">
                 <button className="buttonlogin">Farmer Login</button>
               </Link>

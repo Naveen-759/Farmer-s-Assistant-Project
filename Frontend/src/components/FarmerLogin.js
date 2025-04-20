@@ -19,6 +19,8 @@ function Login() {
           password,
         }
       );
+      console.log(response.data);
+
       // Store the JWT token in local storage or cookie
       localStorage.setItem("token", response.data.token);
       navigate("/home");

@@ -1,8 +1,12 @@
-import React from "react";
+import { React } from "react";
 import "../components/Main.css";
 import { Link } from "react-router-dom";
+// export const userContext = createContext();
 export default function Main() {
+  // const [isOpen, setIsOpen] = useState(false);
+
   return (
+    // <userContext.Provider value={[isOpen, setIsOpen]}>
     <div className="main1">
       <div className="cont1">
         <Link to="/croplist">
@@ -13,7 +17,7 @@ export default function Main() {
           grown in that selected soil
         </div>
       </div>
-      <hr />
+      {/* <hr /> */}
       <div className="cont2">
         <Link to="/fertilizers">
           <div className="container2">Fertilizers</div>
@@ -23,7 +27,7 @@ export default function Main() {
           get the suitable Fertilizer to be applied
         </div>
       </div>
-      <hr />
+      {/* <hr /> */}
 
       <div className="cont3">
         <Link to="/diseases">
@@ -34,7 +38,7 @@ export default function Main() {
           selected crop
         </div>
       </div>
-      <hr />
+      {/* <hr /> */}
 
       <div className="cont4">
         <Link to="/pesticides">
@@ -46,5 +50,6 @@ export default function Main() {
         </div>
       </div>
     </div>
+    // </userContext.Provider>
   );
 }

@@ -14,7 +14,7 @@ const adminLogin = require("./controllers/admin");
 
 app.use(
   cors({
-    origin: "https://farmer-s-assistant-project-ahvc.vercel.app",
+    origin: "*",
   })
 );
 app.use((req, res, next) => {

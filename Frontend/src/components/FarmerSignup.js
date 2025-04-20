@@ -21,7 +21,12 @@ function Signup() {
           password,
         }
       );
+
+      console.log(response.data);
+      // if (response.ok) {
+      alert(response.data);
       navigate("/home");
+      // }
     } catch (error) {
       console.error("There was an error signing up!", error);
       alert("Error signing up. Please try again.");

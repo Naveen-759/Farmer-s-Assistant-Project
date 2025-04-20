@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 
 const farmerSignup = async (req, res) => {
   const { username, email, password } = req.body;
+  // console.log(req.body);
 
   if (!username || !email || !password) {
     return res
@@ -19,17 +20,18 @@ const farmerSignup = async (req, res) => {
 
   // Execute the query
   pool.query(sql, [username, email, hashedPassword], (err, results) => {
+    console.log("getting inside", err);
     if (err) {
-      res.send("Some error occured");
+      // res.send("Some error occured");
       return res
         .status(500)
         .send("An error occurred while signing up the user.");
     }
-    res.send("User signed up successfully!");
+    res.status(201).send("User registered successfully!");
   });
 };
 
-const JWT_SECRET = "V0ldnVjQ0VZ5UyNbG6Tx0a9XaC2h7J1K";
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const farmerLogin = async (req, res) => {
   const { email, password } = req.body;
