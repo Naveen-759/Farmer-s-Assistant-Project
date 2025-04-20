@@ -15,6 +15,7 @@ const startPage = () => {
           <div className="overlay"></div>
           <div className="container">
             <h1 className="titlestart">
+<<<<<<< HEAD
               Revolutionizing Agriculture: Meet Your Farmer Assistant for
               Smarter Farming
             </h1>
@@ -24,6 +25,18 @@ const startPage = () => {
               irrigation, monitor crop health, and manage livestock efficiently
               for increased productivity and sustainable practices. Empower your
               farming with smart decisions and maximize yields effortlessly.
+=======
+              Revolutionizing Agriculture: Meet Your Farmer Assistant
+              for Smarter Farming
+            </h1>
+            <p className="description">
+              Introducing our Farmer Assistant, designed to
+              revolutionize agriculture with real-time insights and actionable
+              data. Optimize irrigation, monitor crop health, and manage
+              livestock efficiently for increased productivity and sustainable
+              practices. Empower your farming with smart decisions and maximize
+              yields effortlessly.
+>>>>>>> c07060249cf693db54721ce136610146b0eb5881
             </p>
             <div className="logandsignbutton">
               <Link to="/farmerlogin">
